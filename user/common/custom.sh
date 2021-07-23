@@ -13,7 +13,6 @@ svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome 
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns                                     package/smartdns
 
 git clone https://github.com/pymumu/luci-app-smartdns.git -b lede                                        package/luci-app-smartdns
-git clone https://github.com/hyird/Openwrt-AdguardHome.git                                               package/AdGuardHome
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git                             package/luci-theme-infinityfreedom
 git clone https://github.com/yangsongli/luci-theme-atmaterial.git                                        package/luci-theme-atmaterial
 git clone https://github.com/jerrykuku/luci-theme-argon.git -b 18.06                                     package/luci-theme-argon-jerrykuku
@@ -30,7 +29,6 @@ git clone https://github.com/garypang13/luci-app-dnsfilter.git                  
 git clone https://github.com/destan19/OpenAppFilter.git                                                  package/luci-app-oaf
 
 
-sed -i 's/DEPENDS.*/& \+adguardhome/g'  package/adg/Makefile
 sed -i 's/DEPENDS.*/& \+kmod-tun +libcap-bin/g'  package/luci-app-openclash/luci-app-openclash/Makefile
 sed -i 's/DEPENDS.*/& \+luci-i18n-mwan3-zh-cn/g'  package/lean/luci-app-syncdial/Makefile
 sed -i 's/DEPENDS.*/& \+kmod-usb-core +kmod-usb-ohci +kmod-usb-uhci +kmod-usb-storage +kmod-usb-storage-extras +kmod-usb2 +kmod-scsi-core/g'  package/lean/automount/Makefile
