@@ -29,6 +29,7 @@ git clone https://github.com/garypang13/luci-app-dnsfilter.git                  
 git clone https://github.com/destan19/OpenAppFilter.git                                                  package/luci-app-oaf
 
 
+sed -i '/TITLE:=Multimedia input support/ a \  DEPENDS:=+kmod-input-core' package/kernel/linux/modules/video.mk
 sed -i 's/DEPENDS.*/& \+kmod-tun +libcap-bin/g'  package/luci-app-openclash/luci-app-openclash/Makefile
 sed -i 's/DEPENDS.*/& \+luci-i18n-mwan3-zh-cn/g'  package/lean/luci-app-syncdial/Makefile
 sed -i 's/DEPENDS.*/& \+kmod-usb-core +kmod-usb-ohci +kmod-usb-uhci +kmod-usb-storage +kmod-usb-storage-extras +kmod-usb2 +kmod-scsi-core/g'  package/lean/automount/Makefile
